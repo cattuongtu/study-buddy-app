@@ -2,13 +2,30 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18  # Specify the Node.js version you need
     commands:
-      - npm install typescript
-      - npm install
+      - npm install  # This installs TypeScript along with other dependencies
+
+  pre_build:
+    commands:
+      - echo "Pre-build phase: No specific commands required for this setup"
+
   build:
     commands:
-      - npm run build
+      - echo "Build phase: Building the TypeScript app with Vite"
+      - npm run build  # Ensure your build script is correctly configured in package.json
+
+  post_build:
+    commands:
+      - echo "Post-build phase: No specific commands required for this setup"
+
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist'
+  base-directory: dist  # Adjust if your build output is in a different directory
+
+cache:
+  paths:
+    - 'node_modules/**/*'
+    - '.vite/**/*'
