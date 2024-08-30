@@ -9,16 +9,16 @@ phases:
 
   pre_build:
     commands:
-      - echo "Pre-build phase: No specific commands required for this setup"
+      - echo "Pre-build phase, No specific commands required for this setup"
 
   build:
     commands:
-      - echo "Build phase: Building the TypeScript app with Vite"
+      - echo "Build phase, Building the TypeScript app with Vite"
       - npm run build  # Ensure your build script is correctly configured in package.json
 
   post_build:
     commands:
-      - echo "Post-build phase: No specific commands required for this setup"
+      - echo "Post-build phase, No specific commands required for this setup"
 
 artifacts:
   files:
