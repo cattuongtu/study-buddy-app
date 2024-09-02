@@ -14,7 +14,7 @@ export default function TimerTabs() {
       
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <TabList aria-label="lab API tabs example">
-          <Tab label="Item One" value="1" />
+          <Tab label="Test Item" value="1" />
           <Tab label="Item Two" value="2" />
           <Tab label="Item Three" value="3" />
           {tabs.map(tab => 
